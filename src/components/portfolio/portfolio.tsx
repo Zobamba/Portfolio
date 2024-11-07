@@ -4,105 +4,78 @@ import Image from 'next/image'
 
 const Portfolio = () => {
   return (
-    <div className="px-32 pt-16">
+    <div className="px-8 sm:px-32 pt-16">
       <div className="flex flex-col items-center justify-center mb-12">
-        <h1 className="text-4xl font-bold mb-2">My Portfolio</h1>
-        <p className="text-lg mb-4 text-gray-500">Check out some applications {`I've`} developed</p>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 text-center">Portfolio Highlights</h1>
+        <p className="text-base sm:text-lg mb-4 text-gray-500 text-center">
+          Explore a selection of applications I’ve developed
+        </p>
       </div>
       <div>
         <ul>
-          <li className="flex items-center justify-between mb-24">
-            <div className="w-62%">
-              <Image width={600} height={600} alt="delic" src={'/delic.jpeg'} />
-            </div>
-            <div className="w-[35%]">
-              <h1 className="text-4xl font-bold mb-2">Delic Restaurant</h1>
-              <p className="text-lg mb-4 text-gray-500 text start mt-4 mb-8">
-                An online restaurant application for users to order and track meals/dishes.
-              </p>
-              <Link
-                className="bg-[#00FFD0] p-[12px] rounded hover:opacity-65 cursor-pointer"
-                href={'https://delic.netlify.app/'}
-                target="blank"
-              >
-                View Application
-              </Link>
-            </div>
-          </li>
-          <li className="flex items-center justify-between mb-24">
-            <div className="w-62%">
-              <Image width={600} height={600} alt="delic-admin" src={'/delic-admin.png'} />
-            </div>
-            <div className="w-[35%]">
-              <h1 className="text-4xl font-bold mb-2">Delic Admin</h1>
-              <p className="text-lg mb-4 text-gray-500 text start mt-4 mb-8">
-                The admin panel of the online restaurant application to manage the {`restaurant's`}{' '}
-                menu, including adding, updating, or removing dishes, monitor and filling incoming
-                orders.
-              </p>
-              <Link
-                className="bg-[#00FFD0] p-[12px] rounded hover:opacity-65 cursor-pointer"
-                href={'https://delic-admin.netlify.app/'}
-                target="blank"
-              >
-                View Application
-              </Link>
-            </div>
-          </li>
-          <li className="flex items-center justify-between mb-24">
-            <div className="w-62%">
-              <Image width={600} height={600} alt="delic-be" src={'/delic-be.jpeg'} />
-            </div>
-            <div className="w-[35%]">
-              <h1 className="text-4xl font-bold mb-2">Delic Backend</h1>
-              <p className="text-lg mb-4 text-gray-500 text start mt-4 mb-8">
-                The backend system for the online restaurant application.
-              </p>
-              <Link
-                className="bg-[#00FFD0] p-[12px] rounded hover:opacity-65 cursor-pointer"
-                href={'https://github.com/Zobamba/Delic'}
-                target="blank"
-              >
-                View Application
-              </Link>
-            </div>
-          </li>
-          <li className="flex items-center justify-between mb-24">
-            <div className="w-62%">
-              <Image width={600} height={600} alt="kings-avatar" src={'/kings-avatar.jpg'} />
-            </div>
-            <div className="w-[35%]">
-              <h1 className="text-4xl font-bold mb-2">Kings Avatar</h1>
-              <p className="text-lg mb-4 text-gray-500 text start mt-4 mb-8">
-                A simple tool for easily creating and customizing profile display pictures.
-              </p>
-              <Link
-                className="bg-[#00FFD0] p-[12px] rounded hover:opacity-65 cursor-pointer"
-                href={'https://kings-avatar.netlify.app/'}
-                target="blank"
-              >
-                View Application
-              </Link>
-            </div>
-          </li>
-          <li className="flex items-center justify-between mb-24">
-            <div className="w-62%">
-              <Image width={600} height={600} alt="spin-the-wheel" src={'/spin-the-wheel.jpg'} />
-            </div>
-            <div className="w-[35%]">
-              <h1 className="text-4xl font-bold mb-2">Spin The Wheel</h1>
-              <p className="text-lg mb-4 text-gray-500 text-start mt-4 mb-8">
-                An interactive spinning wheel game where users can spin to get random results.
-              </p>
-              <Link
-                className="bg-[#00FFD0] p-[12px] rounded hover:opacity-65 cursor-pointer"
-                href={'https://spinourwheel.netlify.app/'}
-                target="blank"
-              >
-                View Application
-              </Link>
-            </div>
-          </li>
+          {[
+            {
+              title: 'Delic Restaurant',
+              description:
+                'A digital platform enabling users to browse, order, and track meals seamlessly.',
+              image: '/delic.jpeg',
+              link: 'https://delic.netlify.app/',
+            },
+            {
+              title: 'Delic Admin',
+              description:
+                'An admin dashboard for managing the restaurant’s menu, including adding, updating, and removing dishes, as well as monitoring and fulfilling incoming orders.',
+              image: '/delic-admin.png',
+              link: 'https://delic-admin.netlify.app/',
+            },
+            {
+              title: 'Delic Backend',
+              description:
+                'A robust backend system powering the Delic Restaurant application, handling user requests, order processing, and seamless communication between the database and frontend.',
+              image: '/delic-be.jpeg',
+              link: 'https://github.com/Zobamba/Delic',
+            },
+            {
+              title: 'Kings Avatar',
+              description:
+                'A user-friendly tool for creating and customizing profile pictures with ease, enabling unique and personalized displays.',
+              image: '/kings-avatar.jpg',
+              link: 'https://kings-avatar.netlify.app/',
+            },
+            {
+              title: 'Spin The Wheel',
+              description:
+                'An engaging and interactive spinning wheel game that provides users with random results at the click of a button. Perfect for games, contests, or giveaways.',
+              image: '/spin-the-wheel.jpg',
+              link: 'https://spinourwheel.netlify.app/',
+            },
+          ].map((project, index) => (
+            <li
+              key={index}
+              className="flex flex-col sm:flex-row items-center justify-between mb-12 sm:mb-24"
+            >
+              <div className="w-full sm:w-2/3 mb-4 sm:mb-0">
+                <Image
+                  width={600}
+                  height={600}
+                  alt={project.title}
+                  src={project.image}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+              <div className="w-full sm:w-1/3 sm:pl-8">
+                <h1 className="text-2xl sm:text-4xl font-bold mb-2">{project.title}</h1>
+                <p className="text-base sm:text-lg mb-4 text-gray-500">{project.description}</p>
+                <Link
+                  className="bg-[#00FFD0] p-3 rounded hover:opacity-65 cursor-pointer"
+                  href={project.link}
+                  target="blank"
+                >
+                  View Application
+                </Link>
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
