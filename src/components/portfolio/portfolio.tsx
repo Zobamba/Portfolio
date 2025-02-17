@@ -14,6 +14,13 @@ const Portfolio = () => {
       <div>
         <ul>
           {[
+             {
+              title: 'Learn Axis',
+              description:
+                'A simple yet powerful Learning Management System designed to help you grow and excel effortlessly!',
+              image: '/learn-axis.jpg',
+              link: 'https://lms-obc.netlify.app/',
+            },
             {
               title: 'Delic Restaurant',
               description:
@@ -42,13 +49,6 @@ const Portfolio = () => {
               image: '/kings-avatar.jpg',
               link: 'https://kings-avatar.netlify.app/',
             },
-            {
-              title: 'Spin The Wheel',
-              description:
-                'An engaging and interactive spinning wheel game that provides users with random results at the click of a button. Perfect for games, contests, or giveaways.',
-              image: '/spin-the-wheel.jpg',
-              link: 'https://spinourwheel.netlify.app/',
-            },
           ].map((project, index) => (
             <li
               key={index}
@@ -60,7 +60,7 @@ const Portfolio = () => {
                   height={600}
                   alt={project.title}
                   src={project.image}
-                  className="w-full h-auto rounded-lg"
+                  className=""
                 />
               </div>
               <div className="w-full sm:w-1/3 sm:pl-8">
