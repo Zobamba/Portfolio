@@ -21,21 +21,19 @@ const About = () => {
               About Me
             </h1>
             <p className="text-lg mb-4 text-gray-500 text-center md:text-left">
-              {"I'm"} a software engineer with a passion for creating user-friendly and accessible
-              applications. I have good communication skills and an important ability to perform
-              well in a team.
+              {"I'm"} a software engineer with 5+ years of experience building scalable,
+              high-performance applications. Skilled in **React.js, Next.js, Node.js, and cloud
+              platforms (AWS, Azure), with a strong focus on microservices and CI/CD automation.
             </p>
             <p className="text-lg mb-4 text-gray-500 text-center md:text-left">
-              I have worked on various projects, from small startups to large corporations, and{' '}
-              {"I'm "}always eager to learn and grow. I am dedicated to crafting robust backend
-              systems and designing intuitive, scalable user interfaces to deliver efficient and
-              innovative solutions.
+              Passionate about crafting robust backend systems and intuitive UIs, I thrive in
+              fast-paced environments, solving complex problems with clean, efficient code.
             </p>
             <p className="text-lg mb-4 text-gray-500 text-center md:text-left">
-              When I am not at my desk, I play video games or listen to music. Sometimes I take a
-              walk on the street.
+              Beyond coding, I enjoy video games, music, and occasional street walks.
             </p>
           </div>
+
           <div className="relative w-full md:w-[50%] h-[300px] md:h-[500px] mt-8 md:mt-0">
             <Image alt="my-image" src="/my-image.jpg" layout="fill" className="object-contain" />
           </div>
@@ -74,7 +72,7 @@ const About = () => {
               </li>
               <li className="bg-gray-100 p-3 rounded hover:opacity-65 cursor-pointer">
                 <Link
-                  href="https://drive.google.com/file/d/1zTRbNh3VhjYCT1P8t2rMM06Mb0pxPdvx/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1bo30CM4ER0VwlvkOj7grvsxlSQyhdWAr/view?usp=sharing"
                   target="blank"
                   className=""
                 >

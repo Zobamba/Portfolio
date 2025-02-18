@@ -22,7 +22,7 @@ const Intro = () => {
           </li>
           <li className="bg-gray-100 p-3 rounded hover:opacity-65 cursor-pointer">
             <Link
-              href="https://drive.google.com/file/d/14t7-xL9h1AeDkwv1yhKCRCe7PlQ3FV1B/view?usp=sharing"
+              href="https://drive.google.com/file/d/1bo30CM4ER0VwlvkOj7grvsxlSQyhdWAr/view?usp=sharing"
               target="blank"
               className=""
             >
